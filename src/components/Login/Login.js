@@ -48,7 +48,7 @@ const Login = (props) => {
   useEffect(() => {
     // here setFormIsValid function will be called after some time to avoid un-necessary render by react
     const validationTimer = setTimeout(() => {
-      console.log('checking form validity')
+      // console.log('checking form validity')
         setFormIsValid(
           emailState.isValid && passwordState.isValid
         );
