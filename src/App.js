@@ -28,8 +28,12 @@ function App() {
   };
 
   return (
-    <AuthContext.Provider value={{ isLoggedIn: isLoggedIn }}> {/* changing the context with isLoggedIn state managed by parent*/}
-      <MainHeader onLogout={logoutHandler} />
+    <AuthContext.Provider value={{
+          isLoggedIn: isLoggedIn,
+          onLogout:logoutHandler
+      }}> {/* changing the context with isLoggedIn state managed by parent*/}
+      
+      <MainHeader />
       <main>
         {!isLoggedIn && <Login onLogin={loginHandler} />}
         {isLoggedIn && <Home onLogout={logoutHandler} />}
